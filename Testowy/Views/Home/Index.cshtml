@@ -1,0 +1,30 @@
+﻿@model Testowy.ViewModels.HomeVM
+
+
+
+    <h2>@Model.Tytul</h2>
+    @foreach(var samochod in Model.Samochody)
+    {
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="img-thumbnail">
+            <img src="@samochod.Miniaturka" alt="" />
+            <div class="figure-caption">
+                <h3 class="pull-right">@samochod.Cena.ToString("c")</h3>
+                <h3>
+                    @samochod.Marka - @samochod.Model - @samochod.RokProdukcji
+                </h3>
+                <h4>
+                    Przebieg : @samochod.Przebieg
+                </h4>
+                <h4>
+                    Pojemnosc : @samochod.Pojemnosc
+                </h4>
+                <h4>
+                    Moc : @samochod.Moc
+                </h4>
+                <p>@samochod.Opis</p>
+            </div>
+        </div>
+    </div>
+    }
+
