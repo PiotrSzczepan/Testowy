@@ -1,0 +1,14 @@
+﻿@model Testowy.Models.Samochod
+
+<h2>@Model.Marka</h2>
+<div class="img-thumbnail">
+    <img alt="@Model.Marka" src="@Model.Zdjecie"/>
+    <div class="caption-full">
+        <h3 class="pull-right">@Model.Cena</h3>
+        <h4>@Model.RokProdukcji</h4>
+        <h4>@Model.Przebieg</h4>
+        <h4>@Model.Pojemnosc</h4>
+        <h4>@Model.Moc</h4>
+        <p>@Model.Opis</p>
+    </div>
+</div>

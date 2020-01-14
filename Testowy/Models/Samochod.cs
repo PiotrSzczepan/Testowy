@@ -16,5 +16,6 @@ namespace Testowy.Models
         public string Zdjecie { get; set; }
         public string Miniaturka { get; set; }
         public bool JestSamochodemTygodnia { get; set; }
+        public bool JestWCentrali { get; set; }
     }
 }

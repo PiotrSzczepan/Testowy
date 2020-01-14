@@ -31,5 +31,14 @@ namespace Testowy.Controllers
 
             return View(homeVM);
         }
+        public IActionResult Szczegoly(int id)
+        {
+            var samochod = _samochodRepository.PobierzSamochodPoId(id);
+            if(samochod == null)
+            {
+                return NotFound();
+            }
+            return View(samochod);
+        }
     }
 }

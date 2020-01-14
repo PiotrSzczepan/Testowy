@@ -1,17 +1,18 @@
-﻿@model Testowy.ViewModels.HomeVM
+﻿@model HomeVM
 
 
 
-    <h2>@Model.Tytul</h2>
-    @foreach(var samochod in Model.Samochody)
-    {
+<h2>@Model.Tytul</h2>
+@foreach (var samochod in Model.Samochody)
+{
     <div class="col-sm-4 col-lg-4 col-md-4">
         <div class="img-thumbnail">
             <img src="@samochod.Miniaturka" alt="" />
             <div class="figure-caption">
                 <h3 class="pull-right">@samochod.Cena.ToString("c")</h3>
                 <h3>
-                    @samochod.Marka - @samochod.Model - @samochod.RokProdukcji
+                    <a asp-controller="Home" asp-action="Szczegoly" asp-route-id="@samochod.Id">@samochod.Marka</a> - @samochod.Model - @samochod.RokProdukcji
+                    <a ></a>
                 </h3>
                 <h4>
                     Przebieg : @samochod.Przebieg
@@ -26,5 +27,5 @@
             </div>
         </div>
     </div>
-    }
+}
 
