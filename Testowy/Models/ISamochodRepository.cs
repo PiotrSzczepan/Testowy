@@ -8,5 +8,10 @@ namespace Testowy.Models
         IEnumerable<Samochod> PobierzSamochody();
 
         Samochod PobierzSamochodPoId(int samochodId);
+
+
+        void DodajSamochod(Samochod samochod);
+        void EdytujSamochod(Samochod samochod);
+        void UsunSamochod(Samochod samochod);
     }
 }
